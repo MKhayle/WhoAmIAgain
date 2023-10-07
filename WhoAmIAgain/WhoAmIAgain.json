@@ -1,0 +1,11 @@
+{
+  "Author": "MidoriKami",
+  "Name": "Who am I again?",
+  "InternalName": "WhoAmIAgain",
+  "Description": "Shows how you are in the server info bar.",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/MidoriKami/WhoAmIAgain",
+  "Tags": [ "Area", "Info", "Location", "Overlay", "UI", "Zone" ],
+  "CategoryTags": [ "UI" ],
+  "Punchline": "Ever forget who you are? We can fix that!"
+}
