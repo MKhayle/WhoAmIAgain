@@ -54,6 +54,6 @@
 
   <ItemGroup>
     <None Remove="packages.lock.json" />
-    <None Remove="WhereAmIAgain.json" />
+    <None Remove="WhoAmIAgain.json" />
   </ItemGroup>
 </Project>
