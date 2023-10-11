@@ -25,7 +25,7 @@ public sealed class WhoAmIAgainPlugin : IDalamudPlugin
 
     private void OnLogin()
     {
-        if (dtrBar.Get("WhoAmIAgain") is not { } entry) return;
+        if (dtrBar.Get("Who Am I Again?") is not { } entry) return;
 
         dtrBarEntry = entry;
         dtrBarEntry.Text = clientState.LocalPlayer?.Name;
