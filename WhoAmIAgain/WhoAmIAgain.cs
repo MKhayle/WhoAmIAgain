@@ -9,7 +9,7 @@ public sealed class WhoAmIAgainPlugin : IDalamudPlugin {
     private readonly IClientState clientState;
     private readonly IDtrBar dtrBar;
     
-    private DtrBarEntry? dtrBarEntry;
+    private IDtrBarEntry? dtrBarEntry;
     
     public WhoAmIAgainPlugin(IClientState clientStateService, IDtrBar dtrService) {
         clientState = clientStateService;
