@@ -2,6 +2,7 @@
 using Dalamud.Game.Text.SeStringHandling;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
+using System;
 
 namespace WhereAmIAgain;
 
@@ -29,7 +30,7 @@ public sealed class WhoAmIAgainPlugin : IDalamudPlugin {
         dtrBarEntry.Tooltip = new SeStringBuilder().AddText($"You are: {clientState.LocalPlayer?.Name ?? "Unknown"}").Build();
     }
 
-    private void OnLogout() {
+    private void OnLogout(int type, int code) {
         dtrBarEntry?.Remove();
         dtrBarEntry = null;
     }
