@@ -2,7 +2,6 @@
 using Dalamud.Game.Text.SeStringHandling;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
-using System;
 
 namespace WhereAmIAgain;
 
