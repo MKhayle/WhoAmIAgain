@@ -2,20 +2,23 @@
 using Dalamud.Game.Text.SeStringHandling;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
+using System.Threading.Tasks;
 
 namespace WhereAmIAgain;
 
 public sealed class WhoAmIAgainPlugin : IDalamudPlugin {
     private readonly IClientState clientState;
     private readonly IDtrBar dtrBar;
+    private readonly IFramework framework;
     
     private IDtrBarEntry? dtrBarEntry;
     
-    public WhoAmIAgainPlugin(IClientState clientStateService, IDtrBar dtrService) {
+    public WhoAmIAgainPlugin(IClientState clientStateService, IFramework framework, IDtrBar dtrService) {
+        this.framework = framework;
         clientState = clientStateService;
         dtrBar = dtrService;
         
-        if (clientState.IsLoggedIn) OnLogin();
+        if (clientState.IsLoggedIn) framework.RunOnFrameworkThread(OnLogin);
         
         clientState.Login += OnLogin;
         clientState.Logout += OnLogout;
